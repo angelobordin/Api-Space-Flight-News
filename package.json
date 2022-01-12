@@ -1,0 +1,24 @@
+{
+  "name": "apicoodesh",
+  "version": "1.0.0",
+  "description": "Api Coodesh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/Angelo-Bordin/api-coodesh"
+  },
+  "author": "@angelo_bordin",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "express": "^4.17.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
