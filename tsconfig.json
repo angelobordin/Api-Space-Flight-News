@@ -1,0 +1,11 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "outDir": "./src/dist/js",
+    "target": "ES2020",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "removeComments": true
+  },
+  "include": ["./src/app/**/*"]
+}
