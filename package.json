@@ -2,13 +2,14 @@
   "name": "apicoodesh",
   "version": "1.0.0",
   "description": "Api Coodesh",
-  "main": "index.js",
+  "main": "src/app/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon /src/app/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "github.com/Angelo-Bordin/api-coodesh"
+    "url": "github.com/angelobordin/Api-Space-Flight-News"
   },
   "author": "@angelo_bordin",
   "license": "ISC",
