@@ -1,7 +1,9 @@
-const express = require('express');
+import express from 'express';
+import Routes from '../dist/js/routes/RouteBase.js';
+
 const app = express();
 const port = 3000;
 
-app.listen(port, () => console.log(`Server is running at port ${port}`));
+Routes(app);
 
-module.exports = app;
+app.listen(port, () => console.log(`Server is running at port ${port}`));
