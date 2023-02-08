@@ -9,3 +9,30 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Article {
+  id          Int      @id @unique @default(autoincrement())
+  featured    String
+  title       String
+  url         String
+  imageUrl    String
+  newsSite    String
+  summary     String
+  publishedAt String
+  launches    Launch[]
+  events      Event[]
+}
+
+model Launch {
+  id        String   @unique
+  providder String
+  Article   Article? @relation(fields: [articleId], references: [id])
+  articleId Int?
+}
+
+model Event {
+  id        String   @unique
+  provider  String
+  Article   Article? @relation(fields: [articleId], references: [id])
+  articleId Int?
+}
