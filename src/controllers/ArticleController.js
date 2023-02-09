@@ -28,5 +28,25 @@ export class ArticleController {
         } catch (error) {
             return res.status(500).json(error.message);
         };
+    };
+
+    static async updateArticle(req, res) {
+        try {
+            const id = req.id;
+            const result = await ArticleService.updateArticle(id);
+            return res.status(200).json(result);
+        } catch (error) {
+            return res.status(500).json(error.message);
+        };
+    };
+
+    static async deleteArticle(req, res) {
+        try {
+            const id = req.id;
+            const result = await ArticleService.deleteArticle(id);
+            return res.status(200).json(result);
+        } catch (error) {
+            return res.status(500).json(error.message);
+        };
     }
 };

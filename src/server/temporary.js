@@ -38,15 +38,15 @@ app.get("/", (req, res) => {
 //         })
 // });
 
-app.put("/articles/:id", (req, res) => {
-   // atualiza artigo por id 
-   const id = req.params.id;
-   const artigo = req.body;
-   db.updateArticle(id, artigo)
-        .then(resultado => {
-            res.send(resultado)
-        })
-});
+// app.put("/articles/:id", (req, res) => {
+//    // atualiza artigo por id 
+//    const id = req.params.id;
+//    const artigo = req.body;
+//    db.updateArticle(id, artigo)
+//         .then(resultado => {
+//             res.send(resultado)
+//         })
+// });
 
 app.delete("/articles/:id", (req, res) => {
     // deleta artigo por id

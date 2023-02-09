@@ -27,11 +27,23 @@ export class ArticleService {
 
     static async insertArticle(newArticle) {
         try {
-            return await prismaClient.article.findFirstOrThrow({
-                where: {
-                    
-                }
-            });
+            return await prismaClient.article.create(newArticle);
+        } catch (error) {
+            throw new Error(error);
+        };
+    };
+
+    static async updateArticle(id) {
+        try {
+            return await prismaClient.article.update(id);
+        } catch (error) {
+            throw new Error(error);
+        };
+    };
+
+    static async deleteArticle(id) {
+        try {
+            return await prismaClient.article.delete(id);
         } catch (error) {
             throw new Error(error);
         };
