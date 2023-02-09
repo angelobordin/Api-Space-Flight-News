@@ -12,7 +12,7 @@ datasource db {
 
 model Article {
   id          Int      @id @unique @default(autoincrement())
-  featured    String
+  featured    Boolean
   title       String
   url         String
   imageUrl    String

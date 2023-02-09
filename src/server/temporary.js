@@ -11,32 +11,32 @@ app.get("/", (req, res) => {
     })
 });
 
-app.get("/articles", (req, res) => {
-    //retorna artigos paginados -- ?_start=1&_limit=30
-    const start = req.query._start
-    const limit = req.query._limit
-    db.returnPagedArticle(start, limit)
-        .then(resultado => {
-            res.send(resultado)
-        })
-});
+// app.get("/articles", (req, res) => {
+//     //retorna artigos paginados -- ?_start=1&_limit=30
+//     const start = req.query._start
+//     const limit = req.query._limit
+//     db.returnPagedArticle(start, limit)
+//         .then(resultado => {
+//             res.send(resultado)
+//         })
+// });
 
-app.get('/articles/:id', (req, res) => {
-    // retorna dados de artigo por id
-    const id = req.params.id;
-    db.returnArticle(id)
-        .then(resultado => {
-            res.send(resultado)
-        })
-});
+// app.get('/articles/:id', (req, res) => {
+//     // retorna dados de artigo por id
+//     const id = req.params.id;
+//     db.returnArticle(id)
+//         .then(resultado => {
+//             res.send(resultado)
+//         })
+// });
 
-app.post("/articles", (req, res) => {
-    // inser e artigo 
-    db.insertArticle(req.body)
-        .then(resultado => {
-            res.send(resultado)
-        })
-});
+// app.post("/articles", (req, res) => {
+//     // inser e artigo 
+//     db.insertArticle(req.body)
+//         .then(resultado => {
+//             res.send(resultado)
+//         })
+// });
 
 app.put("/articles/:id", (req, res) => {
    // atualiza artigo por id 
