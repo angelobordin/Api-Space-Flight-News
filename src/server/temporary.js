@@ -48,14 +48,14 @@ app.get("/", (req, res) => {
 //         })
 // });
 
-app.delete("/articles/:id", (req, res) => {
-    // deleta artigo por id
-    const id = req.params.id;
-    db.deleteArticle(id)
-        .then(resultado => {
-            res.send(resultado)
-        })
-});
+// app.delete("/articles/:id", (req, res) => {
+//     // deleta artigo por id
+//     const id = req.params.id;
+//     db.deleteArticle(id)
+//         .then(resultado => {
+//             res.send(resultado)
+//         })
+// });
 
 
 app.listen(8080, () => {
