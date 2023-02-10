@@ -1,9 +1,10 @@
 import { ArticleService } from "../services/ArticleService.js";
+const service = new ArticleService('article');
 
 export class ArticleController {
     static async getArticlesList(req, res) {
         try {
-            const result = await ArticleService.getArticlesList()
+            const result = await service.getRegisterList();
             return res.status(200).json(result);
         } catch (error) {
             return res.status(500).json(error.message);
@@ -13,7 +14,7 @@ export class ArticleController {
     static async getArticleById(req, res) {
         try {
             const { id } = req.params;
-            const result = await ArticleService.getArticleById(id);
+            const result = await service.getArticleById(id);
             return res.status(200).json(result);
         } catch (error) {
             return res.status(500).json(error.message);
@@ -23,7 +24,7 @@ export class ArticleController {
     static async insertArticle(req, res) {
         try {
             const newArticle = req.body;
-            const result = await ArticleService.insertArticle(newArticle);
+            const result = await service.insertNewRegister(newArticle);
             console.log(result);
             return res.status(200).json(result);
         } catch (error) {
@@ -35,7 +36,7 @@ export class ArticleController {
         try {
             const { id } = req.params;
             const newData = req.body;
-            const result = await ArticleService.updateArticle(id, newData);
+            const result = await service.updateRegister(Number(id), newData);
             return res.status(200).json(result);
         } catch (error) {
             return res.status(500).json(error.message);
@@ -45,7 +46,7 @@ export class ArticleController {
     static async deleteArticle(req, res) {
         try {
             const { id } = req.params;
-            const result = await ArticleService.deleteArticle(id);
+            const result = await service.deleteRegister(Number(id));
             return res.status(200).json(result);
         } catch (error) {
             return res.status(500).json(error.message);
