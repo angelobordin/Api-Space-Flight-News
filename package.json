@@ -5,8 +5,9 @@
   "main": "src/server/server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon"
+    "start-project": "concurrently \"npm run server\" \"npm run frontend\"",
+    "server": "nodemon",
+    "frontend": "npx lite-server"
   },
   "repository": {
     "type": "git",
