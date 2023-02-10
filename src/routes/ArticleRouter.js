@@ -5,6 +5,8 @@ export const ArticleRouter = Router();
 
 ArticleRouter.get('/article', ArticleController.getArticlesList);
 ArticleRouter.get('/article/:id', ArticleController.getArticleById);
+ArticleRouter.get('/article/:id/events');
+ArticleRouter.get('/article/:id/launches');
 ArticleRouter.post('/article', ArticleController.insertArticle);
 ArticleRouter.put('/article/:id', ArticleController.updateArticle);
 ArticleRouter.delete('/article/:id', ArticleController.deleteArticle);
