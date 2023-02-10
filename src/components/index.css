@@ -6,10 +6,12 @@
 
 body {
     display: flex;
-    align-content: center;
+    align-item: end;
     justify-content: center;
 }
 
 #mainPage {
+    width: 40%;
+    heigth: 100px;
     background-color: blue;
 }
