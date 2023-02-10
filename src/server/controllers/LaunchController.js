@@ -25,7 +25,6 @@ export class LaunchController {
     static async insertLaunch(req, res) {
         try {
             const newLaunch = req.body;
-            console.log(newLaunch)
             const result = await service.insertNewRegister(newLaunch);
             return res.status(200).json(result); 
         } catch (error) {

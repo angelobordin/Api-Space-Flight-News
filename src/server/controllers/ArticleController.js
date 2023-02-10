@@ -4,7 +4,7 @@ const service = new ArticleService('article');
 export class ArticleController {
     static async getArticlesList(req, res) {
         try {
-            const result = await service.getRegisterList();
+            const result = await service.getArticlesList();
             return res.status(200).json(result);
         } catch (error) {
             return res.status(500).json(error.message);
@@ -45,7 +45,6 @@ export class ArticleController {
         try {
             const newArticle = req.body;
             const result = await service.insertNewRegister(newArticle);
-            console.log(result);
             return res.status(200).json(result);
         } catch (error) {
             return res.status(500).json(error.message);
