@@ -14,4 +14,4 @@ function showRegisters(registers) {
         main.innerHTML += `<p>${register.title}</p>`
     };
 }
-getArticles();
+// getArticles();
