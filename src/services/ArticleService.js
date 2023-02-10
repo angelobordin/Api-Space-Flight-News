@@ -35,4 +35,25 @@ export class ArticleService extends Service {
             throw new Error(error);
         };
     };
+
+    async getEventList(articleId){
+        try {
+            return await prismaClient.event.findMany({
+                where: { articleId: articleId }
+            });
+        } catch (error) {
+            throw new Error(error);
+        };
+    };
+
+    async getLaunchList(articleId) {
+        try {
+            return await prismaClient.launch.findMany({
+                where: { articleId: articleId }
+            });
+        } catch (error) {
+            throw new Error(error);
+        };
+    }
+    
 };

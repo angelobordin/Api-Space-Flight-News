@@ -21,6 +21,26 @@ export class ArticleController {
         };
     };
 
+    static async getEventList(req, res) {
+        try {
+            const { articleId } = req.params;
+            const result = await service.getEventList(articleId);
+            return res.status(200).json(result);
+        } catch (error) {
+            return res.status(500).json(error.message);
+        };
+    }
+    
+    static async getLaunchList(req, res) {
+        try {
+            const { articleId } = req.params;
+            const result = await service.getLaunchList(articleId);
+            return res.status(200).json(result);
+        } catch (error) {
+            return res.status(500).json(error.message);
+        };
+    }
+
     static async insertArticle(req, res) {
         try {
             const newArticle = req.body;

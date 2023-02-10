@@ -28,7 +28,7 @@ export class Service {
 
     async insertNewRegister(newRegister) {
         try {
-            return await prismaClient[this.tableName].create({
+            return await prismaClient[this.tableName].createMany({
                 data: { 
                     ...newRegister
                 }

@@ -3,8 +3,8 @@ import {LaunchController} from '../controllers/LaunchController.js';
 
 export const LaunchRouter = Router();
 
-// LaunchRouter.get('/launch', LaunchController.getEventList);
-// LaunchRouter.get('/launch/:id', LaunchController.getEventById);
-// LaunchRouter.post('/launch', LaunchController.insertEvent);
-// LaunchRouter.put('/launch/:id', LaunchController.updateEvent);
-// LaunchRouter.delete('/launch/:id', LaunchController.deleteEvent);
+LaunchRouter.get('/launch', LaunchController.getLaunchList);
+LaunchRouter.get('/launch/:id', LaunchController.getLaunchById);
+LaunchRouter.post('/launch', LaunchController.insertLaunch);
+LaunchRouter.put('/launch/:id', LaunchController.updateLaunch);
+LaunchRouter.delete('/launch/:id', LaunchController.deleteLaunch);

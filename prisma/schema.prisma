@@ -25,7 +25,7 @@ model Article {
 
 model Launch {
   id        String   @unique
-  providder String
+  provider  String
   Article   Article? @relation(fields: [articleId], references: [id])
   articleId Int?
 }
