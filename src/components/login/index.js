@@ -1,3 +1,18 @@
+const userName = document.getElementById('user');
+const password = document.getElementById('password');
+const form = document.getElementById('form-login')
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const userData = {
+        user: userName,
+        password: password
+    };
+
+    
+})
+
 async function getArticles() {
     try {
         const result = await fetch('http://localhost:8090/article');

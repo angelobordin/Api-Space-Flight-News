@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Api Space Flight</title>
+</head>
+<body>
+    <div id="mainDiv">
+        <h1 id="title">Space Flight News</h1>
+        <p id="welcome">Seja Bem-Vindo(a), esta é a página inicial da API de noticias de lançamentos espaciais</p>
+        <div id="login">
+            <h3>Login</h3>
+            <form id="form-login">
+                
+                <div class="field">
+                    <label for="user"><strong>Usuário / E-mail</strong></label>
+                    <input type="text" name="userName" id="user" required>
+                </div>
+
+                <div class="field">
+                    <label for="password"><strong>Senha</strong></label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                
+                <button id="btnLogin" type="submit"><strong>Login</strong></button>
+            </form>
+        </div>
+        
+        <div class="registerLink">
+            <a><strong>Não possui cadastro? Clique aqui</strong></a>
+        </div>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
