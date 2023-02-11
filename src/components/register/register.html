@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="register.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainDiv">
+        <h1 id="title">Space Flight News</h1>
+        <p id="welcome">Seja Bem-Vindo(a), esta é a página inicial da API de noticias de lançamentos espaciais</p>
+        <div id="register">
+            <h3>Register</h3>
+            <form id="form-register">
+                                
+                <div class="field">
+                    <label for="name"><strong>Nome Completo</strong></label>
+                    <input type="text" name="userName" id="name" required>
+                </div>
+
+                <div class="field">
+                    <label for="email"><strong>E-mail</strong></label>
+                    <input type="email" name="userEmail" id="email" required>
+                </div>
+
+                <div class="field">
+                    <label for="password"><strong>Senha</strong></label>
+                    <input type="password" name="userPassword" id="password" required>
+                </div>
+                
+                <button id="btnRegister" type="submit"><strong>Register</strong></button>
+            </form>
+        </div>
+        
+        <div class="loginLink">
+            <p><strong>Já possui login?</strong><a href="../login/index.html">Clique aqui</a></p>
+        </div>
+    </div>
+    <script src="register.js" type="module"></script>
+</body>
+</html>

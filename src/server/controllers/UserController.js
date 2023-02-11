@@ -24,10 +24,10 @@ export class UserController {
     static async insertUser(req, res) {
         try {
             const newUser = req.body;
-            const result = await service.insertNewRegister(newUser);
-            return res.status(200).json(result);
+            const result = await service.insertUser(newUser);
+            return res.json({status: true, message: "User Registered sucessful"});
         } catch (error) {
-            return res.status(500).json(error.message);
+            return res.json({status: false, message: error.message});
         };
     };
   

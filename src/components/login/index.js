@@ -1,4 +1,4 @@
-const userIdentifier = document.getElementById('user');
+const userEmail = document.getElementById('userEmail');
 const password = document.getElementById('password');
 const form = document.getElementById('form-login')
 
@@ -6,7 +6,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const userData = {
-        email: userIdentifier.value,
+        email: userEmail.value,
         password: password.value
     };
     

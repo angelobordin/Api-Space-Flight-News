@@ -20,4 +20,19 @@ export class UserService extends Service {
             throw new Error(error);
         };
     };
+
+    async insertUser(userData) {
+        try {
+            const result = await this.getUserByEmail(userData.email);
+            if (result) throw new Error(`Email already registered!`);
+            
+            return await prismaClient.user.create({
+                data: {
+                    ...userData
+                }
+            });
+        } catch (error) {
+            throw new Error(error);
+        };
+    };
 }
