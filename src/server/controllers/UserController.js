@@ -4,7 +4,6 @@ const service = new UserService('user');
 export class UserController {
     static async getUserList(req, res) {
         try {
-            console.log("getUserList");
             const result = await service.getRegisterList();
             return res.status(200).json(result);
         } catch (error) {
@@ -32,6 +31,25 @@ export class UserController {
         };
     };
   
+    static async authUser(req, res) {
+        try {
+            const result = '';
+            const { email, password } = req.body;
+            let passIsValid = false;
+
+            const user = await service.getUserByEmail(email);
+            if (!user) throw new Error(`User ${email} not registered!`);
+
+            passIsValid = (password === user.password) ? true : false;
+
+            if (!passIsValid) throw new Error(`Password is incorrect!`);        
+
+            return res.json({status: true, message: "User login sucessful"});
+        } catch (error) {
+            return res.json({status: false, message: error.message});
+        };
+    };
+
     static async updateUser(req, res) {
         try {
             const { id } = req.params;

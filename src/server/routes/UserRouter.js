@@ -6,5 +6,6 @@ export const UserRouter = Router();
 UserRouter.get('/user', UserController.getUserList);
 UserRouter.get('/user/:id', UserController.getUserById);
 UserRouter.post('/user', UserController.insertUser);
+UserRouter.post('/user/auth', UserController.authUser);
 UserRouter.put('/user/:id', UserController.updateUser);
 UserRouter.delete('/user/:id', UserController.deleteUser);

@@ -5,13 +5,6 @@ import Routes from './routes/RouteBase.js';
 const app = express();
 const port = 8090;
 app.use(cors());
-// app.use((req, res, next) => {
-//     // TODO: allow only secure origins
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-//     next();
-// });
 
 Routes(app);
 
