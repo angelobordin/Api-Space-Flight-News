@@ -1,3 +1,5 @@
+import {redirect} from '../utils/GenericFunctions.js';
+
 const userName = document.getElementById('name');
 const userEmail = document.getElementById('email');
 const userPassword = document.getElementById('password');
@@ -32,8 +34,9 @@ async function registerUser(userData) {
      
         const userRegistered = result.status;
 
-        if (!userRegistered) alert(result.message);
-        window.location.href = '../login/login.html'
+        if (userRegistered) redirect('../index.html');
+
+        alert(result.message);
     } catch (error) {
         return error.message;
     }

@@ -7,7 +7,7 @@
   "scripts": {
     "start-project": "concurrently \"npm run server\" \"npm run frontend\"",
     "server": "nodemon",
-    "frontend": "npx lite-server"
+    "frontend": "npx lite-server -c ./bs-config.json"
   },
   "repository": {
     "type": "git",

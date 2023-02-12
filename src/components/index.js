@@ -1,3 +1,5 @@
+import {redirect} from './utils/GenericFunctions.js';
+
 const userEmail = document.getElementById('userEmail');
 const password = document.getElementById('password');
 const form = document.getElementById('form-login')
@@ -30,9 +32,9 @@ async function authUser(userData) {
         
         const userAuthenticated = result.status;
 
-        if (!userAuthenticated) alert(result.message);
+        if (userAuthenticated) redirect('./home/home.html');
 
-        redirect('mainPage');
+        alert(result.message);
     } catch (error) {
         return error.message;
     }
