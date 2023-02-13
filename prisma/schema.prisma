@@ -17,8 +17,9 @@ model Article {
   url         String
   imageUrl    String
   newsSite    String
-  summary     String
+  summary     String   @db.VarChar(512)
   publishedAt String
+  updatedAt   String
   launches    Launch[]
   events      Event[]
 }

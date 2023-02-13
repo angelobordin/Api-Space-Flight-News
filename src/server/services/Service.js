@@ -26,12 +26,10 @@ export class Service {
         };
     };
 
-    async insertNewRegister(newRegister) {
+    async insertNewRegister(data) {
         try {
             return await prismaClient[this.tableName].createMany({
-                data: { 
-                    ...newRegister
-                }
+                data
             });
         } catch (error) {
             throw new Error(error);
