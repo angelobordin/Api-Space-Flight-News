@@ -66,6 +66,11 @@ Eu acredito que utilizar o MySQL Workbench será máis fácil para realizar as c
 - Então após realizar a instalação do [MySQL](https://dev.mysql.com/downloads/installer/) do link acima, você deve abrir o **MySQL Workbench**.
 - Realizar a conexão, ou criar um banco local.(Guarde os dados de conexão, como a porta, usuário e senha)
 - Deve então criar um Schema, pois esse será nosso banco de dados.(Guarde também o nome do Schema).
-- Logo em seguida, deve acessar o **VS Code**
+- Logo em seguida, deve acessar o **VS Code**.
+- Abrir o arquivo **.env** na raíz do projeto, e alterar as informações da variável **DATABASE_URL**, conforme os dados guardados.<br>
+EX: DATABASE_URL="mysql://usuário:senha@localhost:porta/nome_do_schema";
+- Após basta entrar no terminal novamente e digitar **npx prisma migrate dev --name initDATABASE**
+- Por último basta digitar no terminal **npx prisma db seed** para realizar a população do banco com dados.
 
-Logo em seguida deve abrir uma nova guia no seu navegador com a tela inicial do projeto.
+Finalizada todas as etapas acima sem erro, basta voltar no seu MySQL Workbench e dar um refresh que as 'tables' devem ter sido criadas.
+Após todos os passo acima serem realizados, digite **npm run start-project** no seu terminal e o projeto será aberto no seu navegador.
