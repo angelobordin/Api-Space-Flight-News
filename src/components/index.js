@@ -32,7 +32,10 @@ async function authUser(userData) {
         
         const userAuthenticated = result.status;
 
-        if (userAuthenticated) redirect('./home/home.html');
+        if (userAuthenticated) {
+            redirect('./home/home.html');
+            return;
+        }
 
         alert(result.message);
     } catch (error) {

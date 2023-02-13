@@ -9,6 +9,9 @@
     "server": "nodemon",
     "frontend": "npx lite-server -c ./bs-config.json"
   },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "repository": {
     "type": "git",
     "url": "github.com/angelobordin/Api-Space-Flight-News"
