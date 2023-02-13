@@ -10,20 +10,10 @@
 <h2>Descrição</h2>
 Um projeto de website, que é baseado na API SpaceFlight News.<br>
 Neste site o intuito é divulgar artigos e reportagens feitas por múltiplas medias referente ao descobrimento e avanaço da ciência sobre o espaço.<br>
+<br>
+:warning: O projeto está incompleto e ainda será atualizado tanto na parte do backend como no frontend.:warning:
 
-<h2>Índice</h2>
-
-* [Descrição do Projeto](#descrição)
-* [Índice](#índice)
-* [Funcionalidades e Demonstração da Aplicação](#Funcionalidades)
-* [Acesso ao Projeto](#acesso-ao-projeto)
-* [Tecnologias utilizadas](#tecnologias-utilizadas)
-* [Pessoas Contribuidoras](#pessoas-contribuidoras)
-* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
-* [Licença](#licença)
-* [Conclusão](#conclusão)
-
-<h2>Funcionalidades :hammer:</h2>
+<h2>Funcionalidades</h2>
 <h3>Implementadas :heavy_check_mark:</h3>
 
 - `Cadastro de Usuários e Login`: O projeto possui tela de cadastro e login para os usuários.
@@ -74,3 +64,21 @@ EX: DATABASE_URL="mysql://usuário:senha@localhost:porta/nome_do_schema";
 
 Finalizada todas as etapas acima sem erro, basta voltar no seu MySQL Workbench e dar um refresh que as 'tables' devem ter sido criadas.
 Após todos os passo acima serem realizados, digite **npm run start-project** no seu terminal e o projeto será aberto no seu navegador.
+
+<h2>Tecnologias Utilizadas</h2>
+
+<ul>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-plain.svg" width="20" height="20"/><b> Visual Studio Code</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="20" height="20"/><b> Node.JS</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="20" height="20"/><b> JavaScript</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="20" height="20"/><b> Express</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="20" height="20"/><b> HTML 5</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="20" height="20"/><b> CSS 3</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="20" height="20"/><b> Git</b></li>
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="20" height="20"/><b> MySQL</b></li>
+</ul>
+
+# Autores
+
+| [<img src="https://avatars.githubusercontent.com/u/70332789?s=400&u=c6b947894c97e0e941f64aafeb22719ff49589ac&v=4" width=115><br><sub>Angelo Bordin</sub>](https://github.com/angelobordin) |
+| :---: |
