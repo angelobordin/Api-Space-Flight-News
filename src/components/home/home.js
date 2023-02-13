@@ -8,7 +8,6 @@ const mainPage = document.getElementById('page');
 btnArticle.addEventListener('click', () => {
     mainPage.innerHTML = '';
     generateArticleList();
-
 });
 
 async function generateArticleList() {
@@ -31,23 +30,23 @@ async function generateArticleList() {
 
 function generateArticleElement(article) {
     return `<div id="article">
-    <div class="article-image">
-        <img src="${article.imageUrl}" alt="imagem do artigo">
-    </div>
-    <div class="article-detail">
-        <div class="article-title">
-            <h2>
-                <strong>${article.title}</strong>
-            </h2>
-        </div>
-        <div class="article-summary">    
-            <p>${article.summary}</p>
-        </div>
-                
-        <div class="article-buttons">
-            <a href="">More Info</a>
-            <a href="${article.url}">Report</a>
-        </div>
-    </div>
-</div>`
+                <div class="article-image">
+                    <img src="${article.imageUrl}" alt="imagem do artigo">
+                </div>
+                <div class="article-detail">
+                    <div class="article-title">
+                        <h2>
+                            <strong>${article.title}</strong>
+                        </h2>
+                    </div>
+                    <div class="article-summary">    
+                        <p>${article.summary}</p>
+                    </div>
+                            
+                    <div class="article-buttons">
+                        <a href="">More Info</a>
+                        <a href="${article.url}">Report</a>
+                    </div>
+                </div>
+            </div>`
 };
