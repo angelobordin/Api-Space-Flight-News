@@ -10,7 +10,8 @@
 <h2>Descrição</h2>
 Um projeto de website, que é baseado na API SpaceFlight News.<br>
 Neste site o intuito é divulgar artigos e reportagens feitas por múltiplas medias referente ao descobrimento e avanaço da ciência sobre o espaço.<br>
-O projeto está incompleto e ainda será autilzado tanto na parte do backend como do frontend.
+<br>
+:warning: O projeto está incompleto e ainda será atualizado tanto na parte do backend como no frontend.:warning:
 
 <h2>Funcionalidades</h2>
 <h3>Implementadas :heavy_check_mark:</h3>
