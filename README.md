@@ -9,7 +9,7 @@
 
 <h2>Descrição</h2>
 Um projeto de website, que é baseado na API SpaceFlight News.<br>
-Neste site o intuito é divulgar artigos e reportagens feitas por múltiplas medias referente ao descobrimento e avanaço da ciência sobre o espaço.<br>
+Neste site o intuito é divulgar artigos e reportagens feitas por múltiplas medias referente ao descobrimento e avanço da ciência sobre o espaço.<br>
 <br>
 :warning: O projeto está incompleto e ainda será atualizado tanto na parte do backend como no frontend.:warning:
 
@@ -62,7 +62,7 @@ EX: DATABASE_URL="mysql://usuário:senha@localhost:porta/nome_do_schema";
 - Após basta entrar no terminal novamente e digitar **npx prisma migrate dev --name initDATABASE**
 - Por último basta digitar no terminal **npx prisma db seed** para realizar a população do banco com dados.
 
-Finalizada todas as etapas acima sem erro, basta voltar no seu MySQL Workbench e dar um refresh que as 'tables' devem ter sido criadas.
+Finalizada todas as etapas acima sem erro, basta voltar no seu MySQL Workbench e dar um refresh que as 'tables' devem ter sido criadas.<br>
 Após todos os passo acima serem realizados, digite **npm run start-project** no seu terminal e o projeto será aberto no seu navegador.
 
 <h2>Tecnologias Utilizadas</h2>
