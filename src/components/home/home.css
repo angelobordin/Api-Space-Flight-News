@@ -4,55 +4,75 @@
     padding:0;
 }
 
+body {
+    background-color: rgba(0, 0, 0, 0.726);
+    display: flex;
+}
+
+@font-face {
+    font-family: 'MOSFET';
+    src: url('../utils/fonts/MOSFET\ Regular.otf') format('opentype'), url('../utils/fonts/MOSFET\ Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NOIZE SPORT';
+    src: url('./utils/fonts/NoizeSportFreeVertion-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #menu {
-    position:fixed;
-    z-index:999; 
-    left:5px; 
-    top:5px;
-    overflow:hidden;
-    user-select: none; /* Tirar a seleção de texto */
-    margin: 10px;
-    padding: 10px;
-    width: 15vw;
-    height: 94vh;
-    border-radius: 16px;
+    color: white;
+    max-width: 40%;
+    height: 100vh;
     box-shadow: 3px 2px 17px -1px rgba(0,0,0,0.64);
 }
 
-.menu-imagem img {
-    width: 60px;
-    height: 60px;
-    margin-right: 10%;
-    margin-bottom: 10%;
-}
-
-.menu-item-lista {
-    padding: 5px;
+#menu h3 {
+    font-size: 0.9em;
+    margin: 20px;
+    font-family: 'MOSFET';
 }
 
 .menu-item {
+    padding: 5px;
+    cursor: pointer; /* Alterar o cursor do mouse */
     padding: 10px;
-    margin: 10px;
 }
 
 .menu-item:hover {
-    cursor: pointer; /* Alterar o cursor do mouse */
-    border-radius: 16px;
-    box-shadow: 0px 0px 17px 0px rgba(0,0,0,1);
+    background-color: rgba(0, 0, 0, 0.61);
 }
 
 .menu-item a {
     font-size: larger;
-    color: gray;
     text-decoration: none
 }
 
 #page {
-    float: right;
+    overflow: auto;
+    width: 100vw;
+    height: 96vh;
+    display: grid;
+    background-color: red;
     margin: 15px;
-    margin-left: 260px;
     border-radius: 14px;
-    width: 80vw;
+}
+
+#page::-webkit-scrollbar {
+    width: 12px;
+}
+
+#page::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: rgb(53, 53, 53);
+}
+
+#page::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
 }
 
 #article {

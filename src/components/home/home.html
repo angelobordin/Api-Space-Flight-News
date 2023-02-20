@@ -5,43 +5,157 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../utils/images/rocket.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/473049b64d.js" crossorigin="anonymous"></script>
+    <title>Space Flight News - Home</title>
 </head>
 <body>
     <div id="menu">
-        <div class="menu-imagem" style="display: flex;">
-            <img src="../images/rocket.png" alt="logo do site (foguete)">
-            <p>API<br> Space Flight<br> News </p>
-        </div>
-        <!-- <div class="menu-botao">
-            <button><i class="fa-solid fa-bars"></i></button>
-        </div> -->
+        <h3>Space Flight News</h3>
         <div class="menu-item-lista">
             <ul style="list-style: none;">
                 <li class="menu-item">
+                    <i class="fa-solid fa-house"></i>
                     <a id="btnHome">Home</a>
                 </li>
                 <li class="menu-item">
+                    <i class="fa-solid fa-rocket"></i>
                     <a id="btnArticle">Artigos</a>
                 </li>
                 <li class="menu-item">
+                    <i class="fa-solid fa-globe"></i>
                     <a id="btnBlog">Blogs</a>
                 </li>
                 <li class="menu-item">
+                    <i class="fa-solid fa-newspaper"></i>
                     <a id="btnInfo">Site Informativos</a>
                 </li>
-                <li class="menu-item">
+                <!-- <li class="menu-item">
                     <a id="btnReport">Reportagens</a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!-- <div id="contacts">
         </div> -->
     </div>
     <div id="page">
+        <div id="article">
+            <div class="article-image">
+                <img src="${article.imageUrl}" alt="imagem do artigo">
+            </div>
+            <div class="article-detail">
+                <div class="article-title">
+                    <h2>
+                        <strong>${article.title}</strong>
+                    </h2>
+                </div>
+                <div class="article-summary">    
+                    <p>${article.summary}</p>
+                </div>
+                        
+                <div class="article-buttons">
+                    <a href="">More Info</a>
+                    <a href="${article.url}">Report</a>
+                </div>
+            </div>
+        </div>
+        <div id="article">
+            <div class="article-image">
+                <img src="${article.imageUrl}" alt="imagem do artigo">
+            </div>
+            <div class="article-detail">
+                <div class="article-title">
+                    <h2>
+                        <strong>${article.title}</strong>
+                    </h2>
+                </div>
+                <div class="article-summary">    
+                    <p>${article.summary}</p>
+                </div>
+                        
+                <div class="article-buttons">
+                    <a href="">More Info</a>
+                    <a href="${article.url}">Report</a>
+                </div>
+            </div>
+        </div><div id="article">
+            <div class="article-image">
+                <img src="${article.imageUrl}" alt="imagem do artigo">
+            </div>
+            <div class="article-detail">
+                <div class="article-title">
+                    <h2>
+                        <strong>${article.title}</strong>
+                    </h2>
+                </div>
+                <div class="article-summary">    
+                    <p>${article.summary}</p>
+                </div>
+                        
+                <div class="article-buttons">
+                    <a href="">More Info</a>
+                    <a href="${article.url}">Report</a>
+                </div>
+            </div>
+        </div><div id="article">
+            <div class="article-image">
+                <img src="${article.imageUrl}" alt="imagem do artigo">
+            </div>
+            <div class="article-detail">
+                <div class="article-title">
+                    <h2>
+                        <strong>${article.title}</strong>
+                    </h2>
+                </div>
+                <div class="article-summary">    
+                    <p>${article.summary}</p>
+                </div>
+                        
+                <div class="article-buttons">
+                    <a href="">More Info</a>
+                    <a href="${article.url}">Report</a>
+                </div>
+            </div>
+        </div><div id="article">
+            <div class="article-image">
+                <img src="${article.imageUrl}" alt="imagem do artigo">
+            </div>
+            <div class="article-detail">
+                <div class="article-title">
+                    <h2>
+                        <strong>${article.title}</strong>
+                    </h2>
+                </div>
+                <div class="article-summary">    
+                    <p>${article.summary}</p>
+                </div>
+                        
+                <div class="article-buttons">
+                    <a href="">More Info</a>
+                    <a href="${article.url}">Report</a>
+                </div>
+            </div>
+        </div><div id="article">
+            <div class="article-image">
+                <img src="${article.imageUrl}" alt="imagem do artigo">
+            </div>
+            <div class="article-detail">
+                <div class="article-title">
+                    <h2>
+                        <strong>${article.title}</strong>
+                    </h2>
+                </div>
+                <div class="article-summary">    
+                    <p>${article.summary}</p>
+                </div>
+                        
+                <div class="article-buttons">
+                    <a href="">More Info</a>
+                    <a href="${article.url}">Report</a>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="home.js" type="module"></script>
-    <script src="https://kit.fontawesome.com/473049b64d.js" crossorigin="anonymous"></script>
 </body>
 </html>

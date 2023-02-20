@@ -60,7 +60,6 @@ divWrongPassword.style.display = 'none';
 
 formRegister.addEventListener('submit', (event) => {
     event.preventDefault();
-
     if (newUserConfirmPassword.value === newUserPassword.value) {
             const userData = {
             name: newUserName.value,
@@ -72,6 +71,8 @@ formRegister.addEventListener('submit', (event) => {
     } else {
         divWrongPassword.style.display = 'block';
     }
+
+    formRegister.reset();
 });
 
 async function registerUser(userData) {
