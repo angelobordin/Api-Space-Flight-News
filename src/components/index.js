@@ -1,12 +1,15 @@
 import {redirect} from './utils/GenericFunctions.js';
 
+// TELA DE LOGIN
+const divLogin = document.getElementById('divLogin');
+const formLogin = document.getElementById('form-login');
 const userEmail = document.getElementById('userEmail');
-const password = document.getElementById('password');
-const form = document.getElementById('form-login')
+const password = document.getElementById('userPassword');
 
-form.addEventListener('submit', (event) => {
+divLogin.style.display = 'none';
+
+formLogin.addEventListener('submit', (event) => {
     event.preventDefault();
-
     const userData = {
         email: userEmail.value,
         password: password.value
@@ -43,21 +46,71 @@ async function authUser(userData) {
     }
 };
 
-// async function getArticles() {
-//     try {
-//         const result = await fetch('http://localhost:8090/article');
-//         const dados = await result.json();
-//         showRegisters(dados);
-//     } catch (error) {
-//         alert(error.message);
-//     };
-// };
+// TELA DE REGISTRO
+const divRegister = document.getElementById('divRegister');
+const formRegister = document.getElementById('form-register');
+const newUserName = document.getElementById('newUserName');
+const newUserEmail = document.getElementById('newUserEmail');
+const newUserPassword = document.getElementById('newUserPassword');
+const newUserConfirmPassword = document.getElementById('newUserConfirmPassword');
+const divWrongPassword = document.getElementById('wrongPassword');
 
-// function showRegisters(registers) {
-//     const main = document.querySelector('main');
-//     for (let register of registers) {
-//         main.innerHTML += `<p>${register.title}</p>`
-//     };
-// }
+divWrongPassword.style.display = 'none';
+// divRegister.style.display = 'none';
 
-// getArticles();
+formRegister.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (newUserConfirmPassword.value === newUserPassword.value) {
+            const userData = {
+            name: newUserName.value,
+            email: newUserEmail.value,
+            password: newUserPassword.value,
+        };
+        
+        registerUser(userData);
+    } else {
+        divWrongPassword.style.display = 'block';
+    }
+});
+
+async function registerUser(userData) {
+    try {
+        let result;
+        await fetch('http://localhost:8090/user', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            result = data
+        });
+     
+        const userRegistered = result.status;
+
+        if (userRegistered) showDiv();
+
+        alert(result.message);
+    } catch (error) {
+        return error.message;
+    }
+}
+
+// VERIFICA QUAL TELA SERA MOSTRADA
+const btnToLogin = document.getElementById('btnToLogin');
+const btnToRegister = document.getElementById('btnToRegister');
+btnToRegister.addEventListener('click', showDiv);
+btnToLogin.addEventListener('click', showDiv);
+
+function showDiv() {
+    if (divRegister.style.display === 'none') {
+        divLogin.style.display = 'none';
+        divRegister.style.display = 'block';
+    } else {
+        divRegister.style.display = 'none';
+        divLogin.style.display = 'block';
+    };
+};

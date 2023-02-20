@@ -4,49 +4,92 @@
 }
 
 body{
+    background-image: url("./utils/images/background_rocket.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: 1em;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-content: center;
+    margin-top: 5vw;
+}
+
+@font-face {
+    font-family: 'MOSFET';
+    src: url('./utils/fonts/MOSFET\ Regular.otf') format('opentype'), url('./utils/fonts/MOSFET\ Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NOIZE SPORT';
+    src: url('./utils/fonts/NoizeSportFreeVertion-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 #mainDiv{
-    border: solid 1px #000000;
-    padding: 10px;
-    margin-top: 2%;
+    color: white;
+    background-color: rgba(64, 65, 64, 0.724);
+    padding: 15px;
 }
 
-#login {
-    margin: 5px;
-    padding: 5px;
-    background-color: rgba(100, 110, 107, 0.724);
+#mainDiv h1 {
+    margin-top: 2%;
+    font-family: 'MOSFET';
+}
+
+#login, #register {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    background-color: rgba(39, 39, 39, 0.724);
     margin-top: 5%;
 }
 
 h3 {
-    margin-bottom: 1em;
+    margin-bottom: 2%;
 }
 
 .field {
     margin-bottom: 1em;
 }
 
-.field label {
-    display: block;
-}
-
 .field input {
-    padding: 1%;
+    width: 50%;
+    border-radius: 5px;
+    padding: 10px;
 }
 
-.btnLogin {
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+#wrongPassword {
+    width: 53%;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: rgb(185, 31, 31);
+    background-color: rgb(114, 42, 42)
+}
+
+#btnLogin, #btnRegister {
     padding: 2px 10px 2px 10px;
 }
 
-.registerLink {
-    margin: 5px;
+#btnToLogin, #btnToRegister {
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: rgba(64, 65, 64, 0.007);
+    border: none; 
+    color: white;
 }
 
-input, #mainDiv, #login, .btnLogin {
+.registerLink, .loginLink {
+    margin: 5px;
+    margin-top: 15px;
+}
+
+#mainDiv, #login, #register {
     border-radius: 14px;
 }

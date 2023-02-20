@@ -11,27 +11,58 @@
 <body>
     <div id="mainDiv">
         <h1 id="title">Space Flight News</h1>
-        <p id="welcome">Seja Bem-Vindo(a), esta é a página inicial da API de noticias de lançamentos espaciais</p>
-        <div id="login">
-            <h3>Login</h3>
-            <form id="form-login">
-                
-                <div class="field">
-                    <label for="userEmail"><strong>Usuário / E-mail</strong></label>
-                    <input type="text" name="userName" id="userEmail" required>
-                </div>
+        <div id="divLogin">
+            <div id="login">
+                <h3>Login</h3>
+                <form id="form-login">
+                    <div class="field">
+                        <input type="email" name="userEmail" id="userEmail" placeholder="Usuário / E-mail" required>
+                    </div>
 
-                <div class="field">
-                    <label for="password"><strong>Senha</strong></label>
-                    <input type="password" name="password" id="password" required>
-                </div>
-                
-                <button id="btnLogin" type="submit"><strong>Login</strong></button>
-            </form>
+                    <div class="field">
+                        <input type="password" name="password" id="userPassword" placeholder="Senha" required>
+                    </div>
+                    
+                    <button id="btnLogin" type="submit"><strong>Login</strong></button>
+                </form>
+            </div>
+            <div class="registerLink">
+                <p><strong>Não possui cadastro?</strong><button id="btnToRegister"> Clique aqui </button></p>
+            </div>
         </div>
-        
-        <div class="registerLink">
-            <p><strong>Não possui cadastro?</strong> <a href="./register/register.html">Clique aqui</a></p>
+
+        <div id="divRegister">
+            <div id="register">
+                <h3>Register</h3>
+                <form id="form-register">
+                                    
+                    <div class="field">
+                        <input type="text" name="newUserName" id="newUserName" placeholder="Nome Completo" required>
+                    </div>
+
+                    <div class="field">
+                        <input type="email" name="newUserEmail" id="newUserEmail" placeholder="E-mail" required>
+                    </div>
+
+                    <div class="field">
+                        <input type="password" name="newUserPassword" id="newUserPassword" placeholder="Senha" required>
+                    </div>
+
+                    <div class="field">
+                        <input type="password" name="newUserConfirmPassword" id="newUserConfirmPassword" placeholder="Confirme sua senha" required>
+                        <div id="wrongPassword">
+                            <p>Senha incorreta. As senhas não coincidem.<br> 
+                                Verifique e tente novamente.</p>
+                        </div>
+                    </div>
+                    
+                    <button id="btnRegister" type="submit"><strong>Register</strong></button>
+                </form>
+            </div>
+            
+            <div class="loginLink">
+                <p><strong>Já possui login?</strong><button id="btnToLogin"> Clique aqui</button></p>
+            </div>          
         </div>
     </div>
     <script src="index.js" type="module"></script>
