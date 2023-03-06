@@ -45,7 +45,7 @@ function generateArticleElement(article) {
                             
                     <div class="article-buttons">
                         <a href="">More Info</a>
-                        <a href="${article.url}">Report</a>
+                        <a href="${article.url}" target="_blank" >Report</a>
                     </div>
                 </div>
             </div>`
