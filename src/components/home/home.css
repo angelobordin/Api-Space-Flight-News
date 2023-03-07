@@ -114,7 +114,7 @@ body {
     margin-bottom: 20px;
     border-radius: 16px;
     font-size: small;
-    width: 100%;
+    width: 95%;
     height: 250px;
     display: flex;
     background-color: rgb(53, 53, 53);
@@ -124,11 +124,12 @@ body {
 
 #article img {
     border-radius: 16px 0px 0px 16px;
-    width: 250px;
+    width: 350px;
     height: 100%;
 }
 
 .article-detail {
+    width: 100%;
     height: 90%;
     padding: 10px;
 }
@@ -143,10 +144,11 @@ body {
 }
 
 .article-buttons {
+    width: 100%;
     height: 15%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 #article a {
