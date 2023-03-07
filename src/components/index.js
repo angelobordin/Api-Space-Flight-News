@@ -6,8 +6,6 @@ const formLogin = document.getElementById('form-login');
 const userEmail = document.getElementById('userEmail');
 const password = document.getElementById('userPassword');
 
-divLogin.style.display = 'none';
-
 formLogin.addEventListener('submit', (event) => {
     event.preventDefault();
     const userData = {
@@ -56,7 +54,7 @@ const newUserConfirmPassword = document.getElementById('newUserConfirmPassword')
 const divWrongPassword = document.getElementById('wrongPassword');
 
 divWrongPassword.style.display = 'none';
-// divRegister.style.display = 'none';
+divRegister.style.display = 'none';
 
 formRegister.addEventListener('submit', (event) => {
     event.preventDefault();

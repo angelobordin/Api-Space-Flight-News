@@ -5,8 +5,13 @@ const btnInfo = document.getElementById('btnInfo');
 const btnReport = document.getElementById('btnReport');
 const mainPage = document.getElementById('page');
 
+btnInfo.addEventListener('click', () => {
+    clearMainPage();
+    generateNewsSiteList();
+});
+
 btnArticle.addEventListener('click', () => {
-    mainPage.innerHTML = '';
+    clearMainPage();
     generateArticleList();
 });
 
@@ -23,6 +28,25 @@ async function generateArticleList() {
             const elementArticle = generateArticleElement(article) 
             mainPage.innerHTML += elementArticle;    
         }
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+async function generateNewsSiteList() {
+    try {
+        // CRIAR ROTA PARA NEWSSITE
+        // let result;
+        // await fetch('http://localhost:8090/article')
+        // .then((response) => response.json())
+        // .then(function(data) {
+        //     result = data;
+        // });
+
+        // for (let article of result) {
+        //     const elementArticle = generateArticleElement(article) 
+        //     mainPage.innerHTML += elementArticle;    
+        // }
     } catch (error) {
         console.log(error);
     }
@@ -54,3 +78,7 @@ function generateArticleElement(article) {
                 </div>
             </div>`
 };
+
+function clearMainPage() {
+    mainPage.innerHTML = '';
+}

@@ -10,6 +10,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model NewsSite {
+  id    Int @id @default(autoincrement())
+  name  String
+}
+
 model Article {
   id          Int      @id @default(autoincrement())
   featured    Boolean  @default(false)
